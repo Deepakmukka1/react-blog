@@ -5,7 +5,7 @@ const Mainsection = () => {
   return (
     <div className="bg-blue-100 border-gray-900 flex flex-wrap flex-col flex-grow justify-center md:w-3/5 p-4 font-semibold text-center h-auto dark:bg-gray-800 dark:text-gray-200">
       
-      <h2 className="font-extrabold text-blue-700 text-4xl">Trending</h2>
+      <h2 className="font-bold text-blue-700 md:text-3xl">Trending</h2>
       <Card />
       <Card />
       <Card />
