@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
+import API_KEY from "../Config/data";
+
 const Mainsection = () => {
   const [articles,setArticles]=useState([])
-  const [loading,setLoading]=useState(true)
+  // const [loading,setLoading]=useState(true)
   useEffect(async()=>{
 
-    const apiData=await axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=3823a878fa644eefa7c3a0a4712e6dbd')
+    const apiData=await axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`)
     const articles=apiData.data.articles;
-    console.log(articles)
+    // console.log(API_KEY)
     setArticles(articles)
 
   },[])
