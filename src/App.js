@@ -10,7 +10,6 @@ function App() {
       <div className="bg-green-500 md:flex md:flex-row w-full justify-evenly md:h-5/6 flex-wrap">
         <Mainsection/>  
         <Suggestions/>
-        <Navbar/>
       </div>
     </div>
   );

@@ -1,15 +1,17 @@
-import React from 'react'
-
+import React from "react";
+import Card from "./Card";
 const Mainsection = () => {
-    return (
-        <div className="bg-yellow-300 flex flex-wrap flex-col flex-grow justify-center md:w-3/5 p-4 font-semibold text-center h-auto">
-            <h2>Blog  -1 </h2>
-            <h2>Blog  -2</h2>
-            <h2>Blog  -3</h2>
-            <h2>Blog  -4</h2>
-            <h2>Blog  -5</h2>
-        </div>
-    )
-}
+  const articles = new Array(9);
+  return (
+    <div className="bg-blue-100 border-gray-900 flex flex-wrap flex-col flex-grow justify-center md:w-3/5 p-4 font-semibold text-center h-auto dark:bg-gray-800 dark:text-gray-200">
+      
+      <h2 className="font-extrabold text-blue-700 text-4xl">Trending</h2>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  );
+};
 
-export default Mainsection
+export default Mainsection;

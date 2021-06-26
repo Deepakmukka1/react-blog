@@ -1,16 +1,17 @@
 import React from 'react'
 import useDarkMode from "../hooks/useDarkMode";
+import Logo from '../Resources/logo.svg'
+import BlogRead from '../Resources/BlogRead.svg'
 const Navbar = () => {
     const [theme,setTheme]=useDarkMode();
     
     return (
-        <div className="bg-blue-900 h-14 flex justify-around items-center w-full p-2">
-            <h2 className="font-semibold text-2xl text-gray-200">Hello from Navbar</h2>
-            <h2 className="font-semibold text-2xl text-gray-200">Hello from Navbar</h2>
+        <div className="bg-blue-50 h-14 flex justify-between items-center w-full p-5 dark:bg-gray-900 border-b-3">
+             <img src={Logo} width="80" height="80"/>
+             <img src={BlogRead} width="120" height="120"/>
             <div className="font-semibold text-2xl text-gray-200 cursor-pointer" onClick={()=>{
                 setTheme(theme)
-                console.log(theme)
-            }}>🎇</div>
+            }}>  {theme === "light" ? "🌙 " : "☀️ "}</div>
         </div>
     )
 }
