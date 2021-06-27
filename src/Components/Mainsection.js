@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
-import API_KEY from "../config/data";
+import API_KEY from "../config/key";
 
 const Mainsection = () => {
   const [articles,setArticles]=useState([])
