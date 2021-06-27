@@ -4,4 +4,4 @@
 
 ### Problems encountered
 1. Almost fixed all the resposiveness issues, but finally understood the tailwind responisiveness utility classes
-2. The main problem is with the API, i chosen the wrong API (reason is the API works fine in local host but after deploying in gh-pages, i realized it blocks the users who dont have enterprise plan ) so finally found alternate API
+2. The main problem i encountered is with the API, i chosen the wrong API (reason is the API works fine in local host but after deploying in gh-pages, i realized it blocks the users who dont have enterprise plan ) so finally found alternate API
