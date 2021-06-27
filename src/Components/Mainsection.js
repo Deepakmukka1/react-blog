@@ -6,12 +6,15 @@ import API_KEY from "../Config/data";
 const Mainsection = () => {
   const [articles,setArticles]=useState([])
   // const [loading,setLoading]=useState(true)
-  useEffect(async()=>{
+  useEffect(()=>{
+    
+    const fetchData=async()=>{
 
-    const apiData=await axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`)
-    const articles=apiData.data.articles;
-    // console.log(API_KEY)
-    setArticles(articles)
+      const apiData=await axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`)
+      const articles=apiData.data.articles;
+      setArticles(articles)
+    }
+    fetchData();
 
   },[])
   // const articles = new Array(9);
