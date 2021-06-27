@@ -15,8 +15,12 @@ const Mainsection = () => {
         }
       };
 
-      const apiData=await axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`,configs);
-      const articles=apiData.data.articles;
+      const apiData=await axios.get(`https://saurav.tech/NewsAPI/top-headlines/category/health/in.json`);
+      let articles=apiData.data.articles;
+      articles=articles.filter((article)=>{
+        return article.urlToImage!=null 
+      })
+      console.log(articles)
       setArticles(articles)
     }
     fetchData();
