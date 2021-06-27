@@ -14,8 +14,8 @@ const Suggestcard = ({
         window.location.href=url;
     }}
     >
-      <div className="w-3/5">
-        <img src={urlToImage} className="rounded-lg" />
+      <div className="rounded-lg md:w-3/5 w-full">
+        <img src={urlToImage} className="md:h-auto rounded-sm float-right ml-5 w-full" />
       </div>
       <div className="w-5/6 mt-4">
         <h2 className="font-bold md:text-xl text-lg mb-2 text-blue-500">
