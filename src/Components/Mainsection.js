@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
-import API_KEY from "../Config/data";
+import API_KEY from "../config/data";
 
 const Mainsection = () => {
   const [articles,setArticles]=useState([])
-  // const [loading,setLoading]=useState(true)
   useEffect(()=>{
     
     const fetchData=async()=>{
