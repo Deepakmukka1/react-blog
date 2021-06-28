@@ -1,5 +1,5 @@
 ### Website layout
-![image](https://user-images.githubusercontent.com/56472120/123408093-4274e800-d5ca-11eb-8fdd-b9b2d33351c2.png)
+![image](https://user-images.githubusercontent.com/56472120/123580233-04a8d700-d7f7-11eb-8f66-fa384c47672e.png)
 
 ### Preview
 https://deepakmukka1.github.io/react-blog/
