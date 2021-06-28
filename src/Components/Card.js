@@ -2,7 +2,8 @@ import React from "react";
 
 const Card = ({description,publishedAt,title,urlToImage,url}) => {
   return (
-    <div onClick={()=>{
+    <div
+    onClick={()=>{
            window.location.href=url
     }}>
       <div className="outline-none bg-blue-200 flex xl:flex-row flex-col justify-between items-center p-8 rounded-lg cursor-pointer dark:bg-gray-900 m-4">
