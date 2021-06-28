@@ -7,8 +7,8 @@ const Navbar = () => {
     
     return (
         <div className="bg-blue-50 h-14 flex justify-between items-center w-full p-5 dark:bg-gray-900 border-b-3">
-             <img src={Logo} width="80" height="80"/>
-             <img src={BlogRead} width="120" height="120"/>
+             <img src={Logo} width="80" height="80" alt="logo"/>
+             <img src={BlogRead} width="120" height="120" alt="logotext"/>
             <div className="font-semibold text-2xl text-gray-200 cursor-pointer outline-none" onClick={()=>{
                 setTheme(theme)
             }}>  {theme === "light" ? "🌙 " : "☀️ "}</div>

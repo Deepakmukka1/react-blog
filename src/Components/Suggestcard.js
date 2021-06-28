@@ -15,7 +15,7 @@ const Suggestcard = ({
     }}
     >
       <div className="rounded-lg md:w-3/5 w-full">
-        <img src={urlToImage} className="md:h-auto rounded-sm float-right ml-5 w-full" />
+        <img src={urlToImage} className="md:h-auto rounded-sm float-right ml-5 w-full" alt="thumbanil"/>
       </div>
       <div className="w-5/6 mt-4">
         <h2 className="font-bold md:text-xl text-lg mb-2 text-blue-500">
@@ -23,10 +23,10 @@ const Suggestcard = ({
         </h2>
         <h2 className="mb-2 font-semibold md:text-base">{description}</h2>
         <h2 className="mt-10">
-         <span class="px-5 font-semibold text-sm bg-blue-500 text-white rounded-full py-3 mr-4">
+         <span className="px-5 font-semibold text-sm bg-blue-500 text-white rounded-full py-3 mr-4">
             Tags
           </span>
-          <span class="px-5 font-semibold text-sm bg-blue-500 text-white rounded-full py-3">
+          <span className="px-5 font-semibold text-sm bg-blue-500 text-white rounded-full py-3">
             Sports
           </span>
         </h2>

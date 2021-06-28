@@ -17,7 +17,6 @@ const Suggestions = () => {
         articles=articles.filter((article)=>{
           return article.urlToImage!=null 
         })
-        console.log(articles)
         setArticles(articles)
       }
       fetchData();

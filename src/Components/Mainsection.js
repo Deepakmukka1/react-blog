@@ -8,11 +8,7 @@ const Mainsection = () => {
      
     
     const fetchData=async()=>{
-      const configs = {
-        headers: {
-          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
-        }
-      };
+     
 
       const apiData=await axios.get(`https://saurav.tech/NewsAPI/everything/cnn.json`);
       let articles=apiData.data.articles;
