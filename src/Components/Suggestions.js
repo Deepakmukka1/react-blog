@@ -1,5 +1,4 @@
 import React from "react";
-// import Suggestcard from
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Suggestcard from "./Suggestcard";
@@ -17,7 +16,7 @@ const Suggestions = () => {
       const apiData = await axios.get(
         `https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json`
       );
-      //https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json
+   
       let articles = apiData.data.articles;
       articles.length = 5;
       articles = removeNullArticles(articles);
