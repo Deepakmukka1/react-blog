@@ -10,6 +10,7 @@ function App() {
         <Mainsection />
         <Suggestions />
       </div>
+      <h4 className="text-base pb-4 dark:text-white">Developed by 👨‍💻 Mukka Deepak </h4>
     </div>
   );
 }
