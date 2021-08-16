@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 
 const Suggestcard = ({
@@ -12,7 +13,7 @@ const Suggestcard = ({
     <div
       className="outline-none bg-blue-200 flex h-auto flex-col justify-between items-center p-8 rounded-lg cursor-pointer dark:bg-gray-900 m-4"
       onClick={() => {
-        window.location.href = url;
+        window.open(url, "_blank").focus();
       }}
     >
       <div className="rounded-lg md:w-3/5 w-full">

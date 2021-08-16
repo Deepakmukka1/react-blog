@@ -3,9 +3,9 @@ import React from "react";
 const Card = ({ description, publishedAt, title, urlToImage, url }) => {
   return (
     <div
-      onClick={() => {
-        window.location.href = url;
-      }}
+    onClick={() => {
+      window.open(url, "_blank").focus();
+    }}
     >
       <div className="outline-none bg-blue-200 flex xl:flex-row flex-col justify-between items-center p-8 rounded-lg cursor-pointer dark:bg-gray-900 m-4">
         <div className="flex flex-col md:w-4/5 w-full text-base md:text-base xl:text-xl text-left p-4 order-last md:order-1 xl:order-1 ">
