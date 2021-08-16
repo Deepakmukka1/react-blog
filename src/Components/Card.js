@@ -1,6 +1,7 @@
 import React from "react";
 
 const Card = ({ description, publishedAt, title, urlToImage, url }) => {
+  const parsedDate=new Date(publishedAt).toUTCString().substr(0,17)
   return (
     <div
     onClick={() => {
@@ -13,8 +14,8 @@ const Card = ({ description, publishedAt, title, urlToImage, url }) => {
             {title}
           </h2>
           <h4 className="mb-2 font-semibold md:text-base">{description}</h4>
-          <h4 className="font-bold md:text-base">
-            Published on : {publishedAt.substr(0, 10)}{" "}
+          <h4 className="font-bold md:text-base pt-2">
+            Published on : {parsedDate}{" "}
           </h4>
         </div>
         <div className="rounded-lg md:w-2/5 xl:order-1 w-full">
