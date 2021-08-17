@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Suggestcard from "./Suggestcard";
 import { removeNullArticles } from "../utils/removeNull";
+import { addingTags } from "../utils/addingTags";
 
 const Suggestions = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+
+    
   
     const fetchData = async () => {
       const sportsData = await axios.get(
@@ -19,28 +22,10 @@ const Suggestions = () => {
         `https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json`
       );
    
-      let sportsArticles=sportsData.data.articles;
-      sportsArticles=sportsArticles.map((article)=>{
-
-        return {...article,tags:"Sports"};
-
-      })
-      sportsArticles.length=3;
-      let scienceArticles=scienceData.data.articles;
-      scienceArticles=scienceArticles.map((article)=>{
-
-        return {...article,tags:"Science"};
-
-      })
-      scienceArticles.length=4;
-      let techArticles=technologyData.data.articles;
-      techArticles=techArticles.map((article)=>{
-
-        return {...article,tags:"Technology"};
-
-      })
-      techArticles.length=3;
-      let articles = [...sportsArticles,...techArticles,...scienceArticles];
+      let sportsArticles=addingTags(sportsData,"Sports");
+      let scienceArticles=addingTags(scienceData,"Science");
+      let techArticles=addingTags(technologyData,"Technology");
+      let articles = [...techArticles,...sportsArticles,...scienceArticles];
       articles.length = 10;
       articles = removeNullArticles(articles);
       setArticles(articles);
