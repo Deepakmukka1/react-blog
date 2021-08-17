@@ -2,23 +2,46 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Suggestcard from "./Suggestcard";
+import { removeNullArticles } from "../utils/removeNull";
 
 const Suggestions = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-    const removeNullArticles = (articles) => {
-      return articles.filter((article) => {
-        return article.urlToImage != null;
-      });
-    };
-
+  
     const fetchData = async () => {
-      const apiData = await axios.get(
+      const sportsData = await axios.get(
         `https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json`
       );
+      const scienceData = await axios.get(
+        `https://saurav.tech/NewsAPI/top-headlines/category/science/in.json`
+      );
+      const technologyData = await axios.get(
+        `https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json`
+      );
    
-      let articles = apiData.data.articles;
-      articles.length = 5;
+      let sportsArticles=sportsData.data.articles;
+      sportsArticles=sportsArticles.map((article)=>{
+
+        return {...article,tags:"Sports"};
+
+      })
+      sportsArticles.length=3;
+      let scienceArticles=scienceData.data.articles;
+      scienceArticles=scienceArticles.map((article)=>{
+
+        return {...article,tags:"Science"};
+
+      })
+      scienceArticles.length=4;
+      let techArticles=technologyData.data.articles;
+      techArticles=techArticles.map((article)=>{
+
+        return {...article,tags:"Technology"};
+
+      })
+      techArticles.length=3;
+      let articles = [...sportsArticles,...techArticles,...scienceArticles];
+      articles.length = 10;
       articles = removeNullArticles(articles);
       setArticles(articles);
     };
@@ -32,7 +55,7 @@ const Suggestions = () => {
         💡 Suggestions
       </h2>
       {articles.map(
-        ({ content, description, publishedAt, title, urlToImage, url }) => {
+        ({ content, description, publishedAt, title, urlToImage, url,tags }) => {
           return (
             <Suggestcard
               content={content}
@@ -40,6 +63,7 @@ const Suggestions = () => {
               publishedAt={publishedAt}
               title={title}
               urlToImage={urlToImage}
+              tags={tags}
               url={url}
               key={url}
             />

@@ -8,6 +8,7 @@ const Suggestcard = ({
   title,
   urlToImage,
   url,
+  tags
 }) => {
   return (
     <div
@@ -33,7 +34,7 @@ const Suggestcard = ({
             Tags
           </span>
           <span className="px-5 font-semibold text-sm bg-blue-500 text-white rounded-full py-3">
-            Sports
+            {tags}
           </span>
         </h2>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Card = ({ description, publishedAt, title, urlToImage, url }) => {
+  
   const parsedDate=new Date(publishedAt).toUTCString().substr(0,17)
   return (
     <div
