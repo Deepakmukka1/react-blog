@@ -16,10 +16,7 @@ const Suggestcard = ({
   const messageURL=whatsAppShare(title,url)
   return (
     <div
-      className="outline-none bg-blue-200 flex h-auto flex-col justify-between items-center p-8 rounded-lg cursor-pointer dark:bg-gray-900 m-4"
-      onClick={() => {
-        window.open(url, "_blank");
-      }}
+      className="outline-none bg-blue-200 flex h-auto flex-col justify-between items-center p-8 rounded-lg dark:bg-gray-900 m-4"
     >
       <div className="w-40 bg-blue-500 md:-top-8 md:left-2 relative text-center leading-10 text-gray-50 transform">{tags}</div>
       <div className="rounded-lg md:w-3/5 w-full">
@@ -30,7 +27,9 @@ const Suggestcard = ({
         />
       </div>
       <div className="w-5/6 mt-4">
-        <h2 className="font-bold md:text-xl text-lg mb-2 text-blue-500">
+        <h2 className="font-bold md:text-xl text-lg mb-2 text-blue-500 cursor-pointer"  onClick={() => {
+        window.open(url, "_blank");
+      }}>
           {title}
         </h2>
         <h2 className="mb-2 font-semibold md:text-base">{description}</h2>
