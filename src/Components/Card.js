@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { whatsAppShare } from "../utils/share";
+import Sharebutton from "./Sharebutton";
 // import Icon from "../Resources/whatsapp.svg"
 
 
@@ -24,11 +25,7 @@ const Card = ({ description, publishedAt, title, urlToImage, url }) => {
           <h4 className="font-bold md:text-base pt-2">
             Published on : {parsedDate}{" "}
           </h4>
-          <button className="bg-green-600 hover:bg-green-800 text-white font-bold rounded w-36 h-9 mt-4 text-xs" onClick={()=>{
-            window.open(messageURL,"_blank")
-          }}>
-            Share on Whatsapp</button>
-          {/* <button class="bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">Share on whatsapp</button> */}
+          <Sharebutton messageURL={messageURL}/>
         </div>
         <div className="rounded-lg md:w-2/5 xl:order-1 w-full bg-purple-800">
           <img
