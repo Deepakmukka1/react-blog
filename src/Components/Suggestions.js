@@ -8,9 +8,6 @@ import { addingTags } from "../utils/addingTags";
 const Suggestions = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-
-    
-  
     const fetchData = async () => {
       const sportsData = await axios.get(
         `https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json`
@@ -21,11 +18,11 @@ const Suggestions = () => {
       const technologyData = await axios.get(
         `https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json`
       );
-   
-      let sportsArticles=addingTags(sportsData,"Sports");
-      let scienceArticles=addingTags(scienceData,"Science");
-      let techArticles=addingTags(technologyData,"Technology");
-      let articles = [...techArticles,...sportsArticles,...scienceArticles];
+
+      let sportsArticles = addingTags(sportsData, "Sports");
+      let scienceArticles = addingTags(scienceData, "Science");
+      let techArticles = addingTags(technologyData, "Technology");
+      let articles = [...techArticles, ...sportsArticles, ...scienceArticles];
       articles.length = 10;
       articles = removeNullArticles(articles);
       setArticles(articles);
@@ -40,7 +37,15 @@ const Suggestions = () => {
         💡 Suggestions
       </h2>
       {articles.map(
-        ({ content, description, publishedAt, title, urlToImage, url,tags }) => {
+        ({
+          content,
+          description,
+          publishedAt,
+          title,
+          urlToImage,
+          url,
+          tags,
+        }) => {
           return (
             <Suggestcard
               content={content}

@@ -13,7 +13,7 @@ const Mainsection = () => {
         `https://saurav.tech/NewsAPI/everything/cnn.json`
       );
       let articles = apiData.data.articles;
-      articles.length = 15;
+      articles.length = 17;
       articles = removeNullArticles(articles);
       setArticles(articles);
     };
