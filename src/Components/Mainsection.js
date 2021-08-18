@@ -22,7 +22,7 @@ const Mainsection = () => {
 
   return (
     <div className="bg-blue-100 border-gray-900 flex flex-wrap flex-col flex-grow justify-start md:w-3/5 p-4 font-semibold text-center h-auto dark:bg-gray-800 dark:text-gray-200">
-      <h2 className="font-bold text-blue-500 md:text-3xl text-2xl underline">
+      <h2 className="font-bold text-blue-500 md:text-3xl text-2xl underline mb-5">
         {" "}
         📰 Trending news
       </h2>

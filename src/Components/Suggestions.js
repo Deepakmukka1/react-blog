@@ -32,7 +32,7 @@ const Suggestions = () => {
 
   return (
     <div className="flex md:flex-row flex-wrap md:w-2/5 justify-center p-4 h-full font-semibold text-center dark:bg-gray-800 dark:text-gray-200">
-      <h2 className="font-bold text-blue-500 md:text-3xl text-2xl underline">
+      <h2 className="font-bold text-blue-500 md:text-3xl text-2xl underline mb-5">
         {" "}
         💡 Suggestions
       </h2>
