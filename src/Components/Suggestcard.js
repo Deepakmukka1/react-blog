@@ -21,7 +21,7 @@ const Suggestcard = ({
         window.open(url, "_blank");
       }}
     >
-      <div className="w-40 rounded-tr-lg  bg-blue-500 -top-8 left-48 relative text-center leading-10 text-gray-50 transform rotate-46 top-right ">{tags}</div>
+      <div className="w-40 bg-blue-500 md:-top-8 md:left-2 relative text-center leading-10 text-gray-50 transform">{tags}</div>
       <div className="rounded-lg md:w-3/5 w-full">
         <img
           src={urlToImage}
