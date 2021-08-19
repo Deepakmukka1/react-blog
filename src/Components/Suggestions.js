@@ -23,7 +23,7 @@ const Suggestions = () => {
       let scienceArticles = addingTags(scienceData, "Science");
       let techArticles = addingTags(technologyData, "Technology");
       let articles = [...techArticles, ...sportsArticles, ...scienceArticles];
-      articles.length = 10;
+      articles.length = 9;
       articles = removeNullArticles(articles);
       setArticles(articles);
     };
