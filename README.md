@@ -5,11 +5,10 @@
 https://deepakmukka1.github.io/react-blog/
 
 ### Light mode
-![image](https://user-images.githubusercontent.com/56472120/123545158-4cd2e580-d774-11eb-925c-16e314870df6.png)
+![image](https://user-images.githubusercontent.com/56472120/136331307-da0b095b-99f2-4b44-b5b6-aadcee3c3b7a.png)
 
 ### Dark mode
-![image](https://user-images.githubusercontent.com/56472120/123545168-5c522e80-d774-11eb-8ecb-489c4d4cc58d.png)
-
+![image](https://user-images.githubusercontent.com/56472120/136331357-c2f876b6-fb6a-4fbf-8654-e29b50a6d469.png)
 
 ### Problems encountered
 1. Almost fixed all the resposiveness issues, but finally understood the tailwind responisiveness utility classes
